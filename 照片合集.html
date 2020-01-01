@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+    </script>
+    <style type="text/css">
+        body{
+            perspective: 1200px;
+        }
+        .box{
+            margin: 100px auto;
+            min-height:100px;
+            position: relative;
+            -webkit-transform-style: preserve-3d;
+            animation: roll 5s linear infinite;
+            transform-origin: center center -99px;
+        }
+        .box:hover{
+            animation-play-state:paused;
+        }
+        @keyframes roll {
+            from{transform:/*rotateX(0deg)*/ rotateY(0deg) /*rotateZ(0deg)*/}
+            to{transform:/*rotateX(360deg)*/ rotateY(360deg) /*rotateZ(360deg)*/}
+        }
+        .box span{
+            height:400px;
+            width: 250px;
+            position: absolute;
+            top:100px ;
+            left: 400px;
+            border: #dddddd 1px solid ;
+        }
+        .box span:nth-child(1){
+            background: url(img/a.jpg);
+            background-size:250px auto ;
+            transform: rotateY(45deg) translateZ(400px);
+        }
+        .box span:nth-child(2){
+            background: url(img/b.jpg);
+            background-size:250px auto ;
+            transform: rotateY(90deg) translateZ(400px);
+        }
+        .box span:nth-child(3){
+            background: url(img/c.jpg);
+            background-size:250px auto ;
+            transform: rotateY(135deg) translateZ(400px);
+        }
+        .box span:nth-child(4){
+            background: url(img/d.jpg);
+            background-size:250px auto ;
+            transform: rotateY(180deg) translateZ(400px);
+
+        }
+        .box span:nth-child(5){
+            background: url(img/e.jpg);
+            background-size:250px auto ;
+            transform: rotateY(225deg) translateZ(400px);
+        }
+        .box span:nth-child(6){
+            background: url(img/f.jpg);
+            background-size:250px auto ;
+            transform: rotateY(270deg) translateZ(400px);
+        }
+        .box span:nth-child(7){
+            background: url(img/g.jpg) translateZ(400px);
+
+        }
+        .box span:nth-child(8){
+            background: url(img/h.jpg);
+            background-size:250px auto ;
+            transform: rotateY(360deg) translateZ(400px);
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="container">
+        <span><!-- <img src="img/a.jpg"> --></span>
+        <span><!-- <img src="img/b.jpg"> --></span>
+        <span><!-- <img src="img/c.jpg"> --></span>
+        <span><!-- <img src="img/d.jpg"> --></span>
+        <span><!-- <img src="img/e.jpg"> --></span>
+        <span><!-- <img src="img/f.jpg"> --></span>
+        <span><!-- <img src="img/g.jpg"> --></span>
+        <span><!-- <img src="img/h.jpg"> --></span>
+    </div>
+</div>
+</body>
+</html>
